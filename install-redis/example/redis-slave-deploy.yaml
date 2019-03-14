@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: redis-slave
+  labels:
+    name: redis-slave
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: redis-slave
+    spec:
+      containers:
+      - name: worker
+        image: redis-slave:4.0.8
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: GET_HOSTS_FROM
+          value: env
+        ports:
+        - containerPort: 6379
