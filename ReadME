@@ -8,7 +8,7 @@ redis-slave                                                      4.0.8          
 而对于master节点的image，只需要在yaml文件中指定相应的版本即可，docker hub中有相应的版本。
 
 Clone https://github.com/BurlyLuo/Docker/tree/master/install-redis/example
-该目录下的文件。然后到对饮的kubernetes平台上部署即可。
+该目录下的文件。然后到对应的kubernetes平台上部署即可。
 效果如下：
 [root@k8s-1 redis]# kubectl get pods -o wide 
 NAME                           READY   STATUS    RESTARTS   AGE   IP             NODE    NOMINATED NODE   READINESS GATES
