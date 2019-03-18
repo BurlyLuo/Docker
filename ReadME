@@ -1,7 +1,7 @@
 为了快速搭建一个符合版本要求的redis集群，一开始由于找不到合适的redis slave docker image 而费神。后来准备自己做一个符合特定版本的redis slave 的image。
 具体参考：https://github.com/BurlyLuo/Docker/blob/master/Dockerfile     https://github.com/BurlyLuo/Docker/blob/master/run.sh
 根据修改Dockerfile中内容来实现想对应的redis slave 版本。
-我在Docker Hub上有做好的redis-slave的image：docker push burlyluo/redis-slave:4.0.8
+我在Docker Hub上有做好的redis-slave的image：docker pull burlyluo/redis-slave:4.0.8
 具体image如下：
 [root@k8s-1 redis]# docker image ls 
 REPOSITORY                                                       TAG                 IMAGE ID            CREATED             SIZE
